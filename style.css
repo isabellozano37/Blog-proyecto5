@@ -67,7 +67,6 @@ header {
 }
 
 .container {
-    /* border: 1px black solid; */
     display: flex;
     flex-direction: row;
 }
@@ -121,34 +120,39 @@ header {
 }
 
 .box4 {
-    /* border: 1px black solid; */
     width: 15%;
+    height: 45rem;
+    margin-top: 2%;
     margin-left: 4%;
     display: flex;
     flex-direction: column;
-
+    overflow-y: scroll; 
 }
 
 .login {
-    /* border: 1px black solid; */
     width: 90%;
     height: auto;
     margin-left: 4%;
-    margin-top: 25%;
+    margin-top: 15%;
     text-align: center;
 }
 
 .sesion {
-    /* border: 1px black solid; */
     width: 90%;
     height: 35%;
     margin-left: 4%;
-    margin-top: 5%;
+    margin-top: 4%;
     text-align: center;
 }
 
 .form-group {
     margin-bottom: 5%;
+}
+
+.error {
+    width: auto;
+    margin: auto;
+    color: red;
 }
 
 .form-group label {
@@ -176,4 +180,77 @@ header {
 
 .form-group button:hover {
     background-color: #00f30c;
+}
+
+.publicite{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .title {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo {
+        width: 30%;
+        max-width: 120px;
+    }
+
+    .redes {
+        width: 30%;
+        max-width: 120px;
+    }
+
+    .box4 {
+        width: 30%;
+        max-width: 120px;
+    }
+
+    .principalText {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .description {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .example {
+        width: 90%;
+        margin-top: 6%;
+    }
+
+    .text {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 5%;
+    }
+
+    .imgExample {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 2%;
+    }
+
+    .login {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+
+    .sesion {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+    }
 }

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Pais Ideal</title>
+    <link rel="icon" href="IMAGENES/DISEÑOS WEB.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="box1">
             <div class="logo"></div>
 
@@ -26,13 +27,13 @@
                 <h2><a href="index.html" style="text-decoration: none; color: white;">INICIO</a></h2>
             </div>
             <div>
-                <h2><a href="place.html"style="text-decoration: none; color: white;">SITIOS DE LOS PAISES</a></h2>
+                <h2><a href="place.html" style="text-decoration: none; color: white;">SITIOS DE LOS PAISES</a></h2>
             </div>
             <div>
-                <h2><a href="food.html"style="text-decoration: none; color: white;">GASTRONOMIA DE LOS PAISES</a></h2>
+                <h2><a href="food.html" style="text-decoration: none; color: white;">GASTRONOMIA DE LOS PAISES</a></h2>
             </div>
             <div>
-                <h2><a href="party.html"style="text-decoration: none; color: white;">FIESTAS DESTACABLES</a></h2>
+                <h2><a href="party.html" style="text-decoration: none; color: white;">FIESTAS DESTACABLES</a></h2>
             </div>
         </div>
     </header>
@@ -68,49 +69,59 @@
                 </div>
             </div>
         </div>
+
         <div class="box4">
             <div class="login">
-                <h2>LOGIN</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="username">Usuario:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmatePassword">Confirmar Contraseña:</label>
-                        <input type="confirmatePassword" id="confirmatePassword" name="confirmatePassword" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Registrarse</button>
-                    </div>
-                </form>
+                <div id="FormContainer" style="display: none;">
+                    <h3>Login</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Usuario:</label>
+                            <input type="username" id="username" name="username" required required onchange="validateForm ()">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required required onchange="validateForm ()">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" required required onchange="checkPasswords()">
+                            <span id="password-error" class="error"></span><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmatePassword">Confirmar Contraseña:</label>
+                            <input type="confirmatePassword" id="confirmatePassword" name="confirmatePassword" required required onchange="checkPasswords()">
+                            <span id="password-error" class="error"></span><br>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="loginButton" onclick="checkPasswords()">Login</button>
+                </div>
             </div>
             <div class="sesion">
-                <h2>Iniciar sesión</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="username">Usuario:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Iniciar sesión</button>
-                    </div>
-                </form>
+                <div id="additionalFormContainer" style="display: none;">
+                    <h3>Inicio de sesion</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Usuario:</label>
+                            <input type="username" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordNew">Contraseña:</label>
+                            <input type="passwordNew" id="passwordNew" name="passwordNew" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="showFormButton">Iniciar sesión</button>
+                </div>
+            </div>
+            <div class="publicite">
+                <h3>Publicidad</h3>
             </div>
         </div>
-
     </div>
 </body>
 
