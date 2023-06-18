@@ -1,5 +1,9 @@
+.box3{
+    overflow-y: scroll; 
+}
+
 .descrip{
-    border: 1px black solid;
+    /* border: 1px black solid; */
     width: auto;
     height: auto;
     margin-right: 10%;

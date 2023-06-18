@@ -24,7 +24,7 @@ function validateForm() {
 
   let emailInput = document.getElementById("email");
   let emailValue = emailInput.value.trim();
- 
+
   return validForm;
 }
 
@@ -44,16 +44,28 @@ function checkPasswords() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("showFormButton").addEventListener("click", function () {
-    var formContainer = document.getElementById("additionalFormContainer");
-    formContainer.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+  var showFormButton = document.getElementById("showFormButton");
+  var formContainer = document.getElementById("additionalFormContainer");
+
+  showFormButton.addEventListener("click", function () {
+    if (formContainer.style.display === "block") {
+      formContainer.style.display = "none";
+    } else {
+      formContainer.style.display = "block";
+    }
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("loginButton").addEventListener("click", function () {
-    var formContainer = document.getElementById("FormContainer");
-    formContainer.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+  var loginButton = document.getElementById("loginButton");
+  var formContainer = document.getElementById("FormContainer");
+
+  loginButton.addEventListener("click", function () {
+    if (formContainer.style.display === "block") {
+      formContainer.style.display = "none";
+    } else {
+      formContainer.style.display = "block";
+    }
   });
 });
