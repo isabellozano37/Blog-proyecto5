@@ -66,7 +66,33 @@ header {
     justify-content: space-around;
 }
 
+@media only screen and (max-width: 650px) {
+    header {
+      margin: -0.3rem;
+    }
+  
+    .title {
+      width: 50%;
+      margin-left: 25%;
+    }
+  
+    .logo {
+      width: 20%;
+      margin-left: 40%;
+    }
+  
+    .redes {
+      width: 25%;
+      margin-left: 37.5%;
+    }
+  }
+
 .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
     display: flex;
     flex-direction: row;
 }
@@ -187,69 +213,28 @@ header {
     text-align: center;
 }
 
-@media only screen and (max-width: 750px) {
-    .title {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    .logo {
-        width: 30%;
-        max-width: 120px;
-    }
+.places{
+    margin-top: 5%;
+}
+.descrip{
+    /* border: 1px black solid; */
+    width: auto;
+    height: auto;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
 
-    .redes {
-        width: 30%;
-        max-width: 120px;
-    }
+.imagenes{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
 
-    .box4 {
-        width: 30%;
-        max-width: 120px;
-    }
-
-    .principalText {
-        width: 100%;
-        margin-top: 3%;
-    }
-
-    .description {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .example {
-        width: 90%;
-        margin-top: 6%;
-    }
-
-    .text {
-        width: 100%;
-        max-width: 300px;
-        margin-top: 5%;
-    }
-
-    .imgExample {
-        width: 100%;
-        max-width: 300px;
-        margin-top: 2%;
-    }
-
-    .login {
-        width: 100%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10%;
-    }
-
-    .sesion {
-        width: 100%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4%;
-    }
+.texto{
+    width: 50%;
+    text-align: start;
+    margin-top: 9%;
 }

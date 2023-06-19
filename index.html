@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Pais Ideal</title>
-    <link rel="icon" href="IMAGENES/DISEÑOS WEB.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -21,110 +20,226 @@
 
             <div class="redes"></div>
         </div>
+
         <div class="box2">
-            <div>
-                <h2><a href="index.html" style="text-decoration: none; color: white;">INICIO</a></h2>
-            </div>
-            <div>
-                <h2><a href="place.html" style="text-decoration: none; color: white;">SITIOS DE LOS PAISES</a></h2>
-            </div>
-            <div>
-                <h2><a href="food.html" style="text-decoration: none; color: white;">GASTRONOMIA DE LOS PAISES</a></h2>
-            </div>
-            <div>
-                <h2><a href="party.html" style="text-decoration: none; color: white;">FIESTAS DESTACABLES</a></h2>
-            </div>
-            <div>
-                <h2><a href="admi.html" style="text-decoration: none; color: white;">ADMI</a></h2>
-            </div>
+            <h2><a href="#" onclick="showContent('index')" style="text-decoration: none; color: white;">INICIO</a></h2>
+            <h2><a href="#" onclick="showContent('place')" style="text-decoration: none; color: white;">PAISES Y
+                    CIUDADES</a></h2>
+            <h2><a href="#" onclick="showContent('food')" style="text-decoration: none; color: white;">GASTRONOMIA</a>
+            </h2>
+            <h2><a href="#" onclick="showContent('party')" style="text-decoration: none; color: white;">FIESTAS
+                    DESTACABLES</a></h2>
+            <h2><a href="admi.html" onclick="loadSubPage('admi.html')"
+                    style="text-decoration: none; color: white;">ADMI</a></h2>
         </div>
     </header>
+    <main id="main-content">
+        <div class="container" id="index">
+            <div class="box">
+                <div class="box3">
+                    <div class="principalText">
 
-    <div class="container">
-        <div class="box3">
-            <div class="principalText">
+                        <div class="welcome">
+                            <h1>Bienvenidos a nuestro Blog de los Mejores Paises para visitar</h1>
+                        </div>
+                        <div class="description">
+                            <h2>
+                                <h1>PAÍSES EXTRAORDINARIOS PARA TI Y TU FAMILIA</h1>En este blog se recomienda los
+                                mejores
+                                países para
+                                visitar, al mejor precio, con extraordinaria cultura de esos países tan bonitos.
+                                También podrás dar tu opinión de tus experiencias en distintos viajes que hayas
+                                realizado y
+                                asín
+                                dar ideas
+                                para publicar.
+                            </h2>
+                            <h4>Por ejemplo estas maravillosas piscinas naturales que están en Escocia, ¿lo sabíais?
+                            </h4>
+                        </div>
 
-                <div class="welcome">
-                    <h1>Bienvenidos a nuestro Blog de los Mejores Paises para visitar</h1>
+                    </div>
+
+                    <div class="example">
+                        <div class="text">
+                            <h2>PISCINAS NATURALES DE ESCOCIA (TE SORPRENDERÁN)</h2>
+                        </div>
+                        <div>
+                            <img class="imgExample" src="IMAGENES/foto1.jpg">
+                            <h3 style="text-align: center;">PISCINAS DE LAS HADAS</h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <h2>
-                        <h1>PAÍSES EXTRAORDINARIOS PARA TI Y TU FAMILIA</h1>En este blog se recomienda los mejores
-                        países para
-                        visitar, al mejor precio, con extraordinaria cultura de esos países tan bonitos.
-                        También podrás dar tu opinión de tus experiencias en distintos viajes que hayas realizado y asín
-                        dar ideas
-                        para publicar.
-                    </h2>
-                    <h4>Por ejemplo estas maravillosas piscinas naturales que están en Escocia, ¿lo sabíais?</h4>
-                </div>
 
-            </div>
+                <div class="box4">
+                    <div class="login">
+                        <div id="FormContainer" style="display: none;">
+                            <h3>Login</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Usuario:</label>
+                                    <input type="username" id="username" name="username" required required
+                                        onchange="validateForm ()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" id="email" name="email" required required
+                                        onchange="validateForm ()">
 
-            <div class="example">
-                <div class="text">
-                    <h2>PISCINAS NATURALES DE ESCOCIA (TE SORPRENDERÁN)</h2>
-                </div>
-                <div>
-                    <img class="imgExample" src="IMAGENES/foto1.jpg">
-                    <h3 style="text-align: center;">PISCINAS DE LAS HADAS</h3>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" id="password" name="password" required
+                                        onchange="checkPasswords()">
+                                    <span id="password-error" class="error"></span><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmatePassword">Confirmar Contraseña:</label>
+                                    <input type="confirmatePassword" id="confirmatePassword" name="confirmatePassword"
+                                        required onchange="checkPasswords()">
+                                    <span id="password-error" class="error"></span><br>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="loginButton" onclick="checkPasswords()">Login</button>
+                        </div>
+                    </div>
+                    <div class="sesion">
+                        <div id="additionalFormContainer" style="display: none;">
+                            <h3>Inicio de sesion</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Usuario:</label>
+                                    <input type="username" id="username" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="showFormButton">Iniciar sesión</button>
+                        </div>
+                    </div>
+                    <div class="publicite">
+                        <h3>Publicidad</h3>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="box4">
-            <div class="login">
-                <div id="FormContainer" style="display: none;">
-                    <h3>Login</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="username">Usuario:</label>
-                            <input type="username" id="username" name="username" required required onchange="validateForm ()">
+        <div class="container" id="place">
+            <div class="box">
+                <div class="box3">
+                    <div class="places">
+                        <h1>España</h1>
+                        <div class="descrip">
+                            <div class="imagenes">
+                                <h2>Merida</h2>
+                                <img src="IMAGENES/merida.jpg" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3> Si os gusta la historia y civilización romana, os recomendamos venir a Mérida.
+                                    Ciudad con una cultura y tradiciones bonitas e interesantes.</h3>
+                            </div>
+                            <div class="imagenes">
+                                <h2>Sevilla</h2>
+                                <img src="IMAGENES/sevilla.jpeg" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3>Si sois unos fanáticos de la semana santa, os recomendamos venir a Sevilla. Además
+                                    es
+                                    una de
+                                    las ciudades con
+                                    mas personalidad que puedes encontrar en España.</h3>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required required onchange="validateForm ()">
-                            
+                    </div>
+                    <div>
+                        <h1>Africa</h1>
+                        <div class="descrip">
+                            <div class="imagenes">
+                                <h2>Egipto</h2>
+                                <img src="IMAGENES/egipto.jpg" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3>Si te gusta las historias y leyendas egipcias, te recomendamos
+                                    ir a Egipto y ver el templo de Lúxor, que es una de los mas bonitos. Tambien os
+                                    recomiendo
+                                    la visita
+                                    a la tumba de Ramses.</h3>
+                            </div>
+                            <div class="imagenes">
+                                <h2>Republica del Congo</h2>
+                                <img src="IMAGENES/congo.jpg" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3> Si eres fanático de los animales te encantara visitar
+                                    la república del congo donde se encuentra el parque nacional de Odzala.</h3>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" id="password" name="password" required onchange="checkPasswords()">
-                            <span id="password-error" class="error"></span><br>
+                    </div>
+                    <div>
+                        <h1>AMÉRICA</h1>
+                        <div class="descrip">
+                            <div class="imagenes">
+                                <h2>Los Angeles</h2>
+                                <img src="IMAGENES/los angeles.jpg" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3>Si te gusta las películas y las atracciones relacionas con disney de verías visitar
+                                    los
+                                    estudios universal
+                                    de Hollywood y el parque de atracciones disneyland. Ademas es una de las ciudades
+                                    con
+                                    mejores playas del pais.</h3>
+                            </div>
+                            <div class="imagenes">
+                                <h2>New York</h2>
+                                <img src="IMAGENES/new york.webp" style="height: 60%; width: 60%">
+                            </div>
+                            <div class="texto">
+                                <h3>Sus sitios icónicos que son los mas recomendados para visitar incluyen
+                                    rascacielos, como el Empire State Building, y el amplio Central Park.
+                                    El teatro Broadway se ubica en la zona del Times Square iluminada con neones.</h3>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="confirmatePassword">Confirmar Contraseña:</label>
-                            <input type="confirmatePassword" id="confirmatePassword" name="confirmatePassword" required onchange="checkPasswords()">
-                            <span id="password-error" class="error"></span><br>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <button type="button" id="loginButton" onclick="checkPasswords()">Login</button>
+                <div class="box4">
+                    <div class="publicite">
+                        <h3>Publicidad</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="sesion">
-                <div id="additionalFormContainer" style="display: none;">
-                    <h3>Inicio de sesion</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="username">Usuario:</label>
-                            <input type="username" id="username" name="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" id="password" name="password" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="form-group">
-                    <button type="button" id="showFormButton">Iniciar sesión</button>
-                </div>
-            </div>
-            <div class="publicite">
-                <h3>Publicidad</h3>
             </div>
         </div>
-    </div>
+        <div class="container" id="food">
+            <div class="box">
+                <div class="box3">
+                </div>
+                <div class="box4">
+                    <div class="publicite">
+                        <h3>Publicidad</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="party">
+            <div class="box">
+                <div class="box3">
+                </div>
+                <div class="box4">
+                    <div class="publicite">
+                        <h3>Publicidad</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

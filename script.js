@@ -1,30 +1,25 @@
-var navLinks = document.querySelectorAll("nav a");
-var contentContainer = document.getElementById("content");
+window.addEventListener("load", function() {
+  showContent("index");
+});
 
-function loadPage(url) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      contentContainer.innerHTML = this.responseText;
+function showContent(id) {
+  let mainContent = document.getElementById("main-content");
+  let container = document.getElementsByClassName("container");
+  
+  for (let i = 0; i < container.length; i++) {
+    if (container[i].id === id) {
+      container[i].style.display = "block";
+    } else {
+      container[i].style.display = "none";
     }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-}
-
-for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    var url = this.href;
-    loadPage(url);
-  });
+  }
 }
 
 function validateForm() {
 
   let emailInput = document.getElementById("email");
   let emailValue = emailInput.value.trim();
-
+ 
   return validForm;
 }
 
@@ -44,10 +39,10 @@ function checkPasswords() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var showFormButton = document.getElementById("showFormButton");
   var formContainer = document.getElementById("additionalFormContainer");
-
+  
   showFormButton.addEventListener("click", function () {
     if (formContainer.style.display === "block") {
       formContainer.style.display = "none";
@@ -57,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var loginButton = document.getElementById("loginButton");
   var formContainer = document.getElementById("FormContainer");
-
+  
   loginButton.addEventListener("click", function () {
     if (formContainer.style.display === "block") {
       formContainer.style.display = "none";
