@@ -213,12 +213,44 @@ header {
     text-align: center;
 }
 
+@media only screen and (max-width: 650px) {
+    .principalText {
+      width: 95%;
+      margin-top: 8%;
+    }
+  
+    .description {
+      width: 95%;
+      margin-left: 2.5%;
+    }
+  
+    .example {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .text {
+      width: 80%;
+      margin-top: 5%;
+    }
+  
+    .imgExample {
+      width: 90%;
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+  
+    .box4 {
+      width: 90%;
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+  }
 
 .places{
     margin-top: 5%;
 }
 .descrip{
-    /* border: 1px black solid; */
     width: auto;
     height: auto;
     margin-right: 10%;
@@ -238,3 +270,19 @@ header {
     text-align: start;
     margin-top: 9%;
 }
+
+@media only screen and (max-width: 650px) {
+    .descrip {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imagenes,
+    .texto {
+      width: 100%;
+    }
+  
+    .texto {
+      text-align: center;
+    }
+  }
