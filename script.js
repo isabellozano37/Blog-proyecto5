@@ -3,7 +3,6 @@ window.addEventListener("load", function() {
 });
 
 function showContent(id) {
-  let mainContent = document.getElementById("main-content");
   let container = document.getElementsByClassName("container");
   
   for (let i = 0; i < container.length; i++) {
