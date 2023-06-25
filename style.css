@@ -316,34 +316,6 @@ footer {
     text-align: center;
 }
 
-/* @media(max-width:650px) {
-
-    .principalText,
-    .description,
-    .text {
-        max-width: none;
-        max-height: none;
-        font-size: 15px;
-    }
-
-    .box1{
-        max-width: none;
-        max-height: none;
-        display: flexbox;
-    };
-
-    .box2 {
-        max-width: none;
-        max-height: none;
-        size: 4px;
-    }
-    .texting{
-        font-size: 15px;
-        display: block;
-        margin-bottom: 10px;
-    }
-} */
-
 @media screen and (max-width: 360px) {
 
     header {
