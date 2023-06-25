@@ -344,7 +344,7 @@ footer {
     }
 } */
 
-@media screen and (max-width: 160px) {
+@media screen and (max-width: 150px) {
 
     header {
         width: 100%;
