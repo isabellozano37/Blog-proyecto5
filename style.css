@@ -316,7 +316,7 @@ footer {
     text-align: center;
 }
 
-@media(max-width:650px) {
+/* @media(max-width:650px) {
 
     .principalText,
     .description,
@@ -341,5 +341,140 @@ footer {
         font-size: 15px;
         display: block;
         margin-bottom: 10px;
+    }
+} */
+
+@media screen and (max-width: 360px) {
+
+    header {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .principalText,
+    .description,
+    .text {
+        max-width: none;
+        max-height: none;
+        font-size: 15px;
+    }
+
+    .box2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .box2 h2 {
+        flex-basis: 50%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      
+    .box1,
+    .box4 {
+        font-size: 15px;
+        display: flexbox;
+        max-width: none;
+        max-height: none;
+    }
+    
+    .logo {
+        width: 30%;
+        height: 3rem;
+        margin-left: 5%;
+        margin-top: 2%;
+        background-size: contain;
+    }
+    
+    .redes {
+        width: 30%;
+        height: 3rem;
+        background-size: contain;
+    }
+    
+    .texting{
+        font-size: 15px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        width: 100%;
+        height: auto;
+        font-size: medium;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    
+    .example {
+        width: 100%;
+        height: auto;
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .text {
+        width: 80%;
+        margin-top: 4%;
+        text-align: center;
+    }
+    
+    .imgExample {
+        width: 100%;
+        height: auto;
+        margin-top: 2%;
+        margin-left: 0;
+        background-size: contain;
+    }
+    
+    .box4 {
+        width: 100%;
+        height: auto;
+        margin-top: 4%;
+        margin-left: 0;
+    }
+    
+    .login,
+    .sesion {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 4%;
+        text-align: center;
+    }
+    
+    .form-group input,
+    .form-group button {
+        width: 100%;
+    }
+    
+    .publicite {
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-top: 4%;
+    }
+    
+    .descrip {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .imagenes,
+    .texto {
+        width: 100%;
+        text-align: center;
+        margin-top: 2%;
+        margin-right: 0;
     }
 }
